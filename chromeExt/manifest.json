@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+
+  "name": "CodeHelper",
+  "description": "Launches text editor with problem title, input , output and more",
+  "version": "1.0",
+  "background": { "scripts": ["background.js"] },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.contest.yandex.ru/*",
+                "https://*.contest.yandex.com/*",
+                "https://*.contest2.yandex.ru/*",
+                "https://*.contest2.yandex.com/*",
+                "http://codeforces.ru/*",
+                "http://codeforces.com/*",
+                "https://hackerrank.com/*",
+                "https://www.hackerrank.com/*",
+                "https://www.facebook.com/hackercup/*",
+                "http://usaco.org/*",
+                "http://www.usaco.org/*",
+                "https://code.google.com/codejam/contest/*",
+                "http://contest.bayan.ir/*",
+                "https://*.kattis.com/problems/*",
+                "https://*.kattis.com/contests/*",
+                "http://www.codechef.com/*",
+                "https://www.codechef.com/*",
+                "https://www.hackerearth.com/*",
+                "http://*.contest.atcoder.jp/*",
+                "https://csacademy.com/*"
+            ],
+            "js": ["jquery-3.2.1.min.js","myscript.js"],
+            "run_at": "document_idle",
+            "all_frames": false
+        }
+    ],
+  "permissions": [
+        "tabs",
+        "http://localhost/"
+  ],
+     "page_action": {
+        "default_icon": "newTask.png",
+        "default_title": "Parse task"
+    },
+
+    "icons": { "16": "newTask16.png"}
+}
