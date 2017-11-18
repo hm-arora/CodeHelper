@@ -1,4 +1,4 @@
-// Show icon for this urls
+// Show icon for this urls only
 function checkForValidUrl(tabId, changeInfo, tab) {
     if (/^https:\/\/.*[.]kattis[.]com\/(contests\/.+\/)?problems\/.*$/.test(tab.url) ||
         /^https:\/\/.*contest2?[.]yandex[.](ru|com)\/.*contest\/\d*\/problems.*$/.test(tab.url) ||

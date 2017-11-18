@@ -2,10 +2,7 @@
 from flask import Flask, request, jsonify
 import subprocess, os
 
-app = Flask(__name__)
-@app.route('/hello')
-def hello():
-    return "Hello"
+app = Flask(__name__)   
 @app.route("/", methods=["POST"])
 def add_user():
     # fetch informatin from request
@@ -18,8 +15,9 @@ def add_user():
     fout = open(path + file_name,"w")
     fin = open("template.cpp","r")
     fout.write(str(fin.read()))
+    # open sublime (open any text editor with command i.e vscode -> code app.py)
     subprocess.Popen(["subl",path + file_name])
-    return "jsonify(request)"
+    return "true"
 
 if __name__ == '__main__':
     app.run(debug=True, port = 12165)

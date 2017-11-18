@@ -29,7 +29,7 @@
                 "http://*.contest.atcoder.jp/*",
                 "https://csacademy.com/*"
             ],
-            "js": ["jquery-3.2.1.min.js","myscript.js"],
+            "js": ["jquery-3.2.1.min.js","contentScript.js"],
             "run_at": "document_idle",
             "all_frames": false
         }
