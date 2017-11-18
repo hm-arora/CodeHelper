@@ -3,7 +3,9 @@ from flask import Flask, request, jsonify
 import subprocess, os
 
 app = Flask(__name__)
-
+@app.route('/hello')
+def hello():
+    return "Hello"
 @app.route("/", methods=["POST"])
 def add_user():
     # fetch informatin from request
