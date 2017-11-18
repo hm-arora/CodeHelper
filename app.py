@@ -9,13 +9,14 @@ def add_user():
     # fetch informatin from request
 
     # print request.form['statement']
+    path = '/media/himanshu/Local Disk/Programs/C++/'
     print request.form['title']
     file_name = str(request.form['title']).lower()
     file_name = file_name.replace(' ','_') + ".cpp"
-    fout = open(file_name,"w")
+    fout = open(path + file_name,"w")
     fin = open("template.cpp","r")
     fout.write(str(fin.read()))
-    subprocess.Popen(["subl",file_name])
+    subprocess.Popen(["subl",path + file_name])
     return "jsonify(request)"
 
 if __name__ == '__main__':
