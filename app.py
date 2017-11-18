@@ -10,7 +10,7 @@ def add_user():
 
     # print request.form['statement']
     path = '/media/himanshu/Local Disk/Programs/C++/'
-    print request.form['title']
+    # print request.form['title']
     file_name = str(request.form['title']).lower()
     file_name = file_name.replace(' ','_') + ".cpp"
     fout = open(path + file_name,"w")
